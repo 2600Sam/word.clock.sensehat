@@ -224,4 +224,10 @@ def main():
             pass
 
 if __name__ == '__main__':
-    main()
+    try:
+        main()
+    except KeyboardInterrupt:
+        hat = SenseHat()
+        hat.clear()
+        pass
+    
