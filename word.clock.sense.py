@@ -46,7 +46,7 @@ def pixel(x,y):
     
 
 def face(hour, minute): # draw the face according to the current time
-    # clear the reg matrix
+    # clear the rgb matrix
     hat = SenseHat()
     hat.clear()
     # to the new hour or passing the old hour
@@ -64,7 +64,6 @@ def face(hour, minute): # draw the face according to the current time
         hour += 1
     if hour > 12:
         hour -= 12
-        # print(hour)
     # display five minute increments for minutes
     if minute > 4 and minute < 10  or minute < 30 and minute > 24 or minute < 36 and \
            minute > 30 or minute > 50 and minute < 56:
@@ -221,7 +220,7 @@ def main():
         minute = now.minute
         if minute == newminute:
             newminute = face(hour, minute)
-        else
+        else:
             pass
 
 if __name__ == '__main__':
