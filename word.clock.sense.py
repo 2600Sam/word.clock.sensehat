@@ -169,7 +169,6 @@ def face(hour, minute): # draw the face according to the current time
     # light up the astericks 
     additive = getadd(minute)
     if additive < 5:
-        !
         if additive == 1:
             if minute < 31:
                 pixel(5,3)
