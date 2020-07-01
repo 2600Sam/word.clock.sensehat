@@ -168,38 +168,40 @@ def face(hour, minute): # draw the face according to the current time
     # fine tune the minutes
     # light up the astericks 
     additive = getadd(minute)
-    if additive == 1:
-        if minute < 31:
-            pixel(5,3)
-        elif minute > 30:
-            pixel(5,3)
-            pixel(6,3)
-            pixel(7,3)
-            pixel(7,2)
-    if additive == 2:
-        if minute < 31:
-            pixel(5,3)
-            pixel(6,3)
-        elif minute > 30:
-            pixel(5,3)
-            pixel(6,3)
-            pixel(7,3)
-    if additive == 3:
-        if minute < 31:
-            pixel(5,3)
-            pixel(6,3)
-            pixel(7,3)
-        elif minute > 30:
-            pixel(5,3)
-            pixel(6,3)
-    if additive == 4:
-        if minute < 31:
-            pixel(5,3)
-            pixel(6,3)
-            pixel(7,3)
-            pixel(7,2)
-        elif minute > 30:
-            pixel(5,3)
+    if additive < 5:
+        !
+        if additive == 1:
+            if minute < 31:
+                pixel(5,3)
+            elif minute > 30:
+                pixel(5,3)
+                pixel(6,3)
+                pixel(7,3)
+                pixel(7,2)
+        if additive == 2:
+            if minute < 31:
+                pixel(5,3)
+                pixel(6,3)
+            elif minute > 30:
+                pixel(5,3)
+                pixel(6,3)
+                pixel(7,3)
+        if additive == 3:
+            if minute < 31:
+                pixel(5,3)
+                pixel(6,3)
+                pixel(7,3)
+            elif minute > 30:
+                pixel(5,3)
+                pixel(6,3)
+        if additive == 4:
+            if minute < 31:
+                pixel(5,3)
+                pixel(6,3)
+                pixel(7,3)
+                pixel(7,2)
+            elif minute > 30:
+                pixel(5,3)
     # set up the next minute and pass it back 
     newminute = minute + 1
     if newminute == 60:
